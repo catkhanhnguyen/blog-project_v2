@@ -5,6 +5,7 @@ import IntroPost from '../Components/IntroPost'
 import Posts from '../Components/Posts'
 import Footer from '../Components/Footer'
 import axios from 'axios'
+import TopButton from '../Components/TopButton'
 
 function Home() {
   const baseUrl = '/recipes'
@@ -28,8 +29,9 @@ function Home() {
       <Header />
       <Search />
       {posts.length > 0 ? <IntroPost post={posts[0]} /> : null}
-      <Posts />
+      {posts.length > 0 ? <Posts posts={posts.slice(1)} /> : null}
       <Footer />
+      <TopButton />
     </div>
   )
 }

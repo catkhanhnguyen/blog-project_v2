@@ -1,9 +1,17 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function IntroPost({ post }) {
+  const navigate = useNavigate()
+
+  const handlePostClick = (postId) => {
+    navigate(`/posts/${postId}`)
+  }
+
   return (
     <Box
+      onClick={() => handlePostClick(post.id)}
       sx={{
         mx: { xs: '70px', md: '100px' },
         gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },

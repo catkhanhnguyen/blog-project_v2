@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Button, ButtonGroup, Grid, IconButton } from '@mui/material'
+import { Box, Button, Grid} from '@mui/material'
 import { useNavigate } from 'react-router-dom'
-import { IoLogoYoutube } from "react-icons/io5"
+
 
 function Header() {
   const navigate = useNavigate();
@@ -57,6 +57,7 @@ function Header() {
           >
             Contact
           </Grid>
+
         </Grid>
       </Grid>
 
@@ -64,10 +65,16 @@ function Header() {
       {/* Subscribe Button */}
       <Button
       sx={{
-        backgroundColor: '#f00', borderRadius: '9999px', color: '#fff', display: 'flex', alignItems: 'center'
+        backgroundColor: 'black',
+        borderRadius: '30px',
+        color: 'white',
+        fontWeight: 'bold',
+        alignItems: 'center',
+        py: 1,
+        px: 1.5
       }} 
       >
-        Subscribe <IoLogoYoutube />
+        Subscribe
       </Button>
     </Box>
   )
